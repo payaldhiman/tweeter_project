@@ -1,0 +1,27 @@
+/*/*css applied to section , form*/
+
+
+h2 {
+  border-bottom: 1px solid ;
+}
+
+.new-tweet {
+  border-radius: 6px;
+  background-position: left top;
+  background-repeat: repeat;
+  width: 400px;
+  height: 160px;
+  background-color: #eee;
+  margin: auto;
+  border: 1px solid #ccc;
+  padding-right: 2em;
+  padding-left: 2em;
+}
+
+textarea {
+  width: 100%;
+}
+
+.counter {
+  float: right;
+}

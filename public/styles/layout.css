@@ -23,3 +23,16 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ body {
+  font-family: 'Roboto Condensed', sans-serif;
+ }
+
+.container {
+  width: 450px;
+  margin: auto;
+  align-content: center;
+  background-color: white;
+  padding: 16px;
+  border: 1px solid white;
+}
