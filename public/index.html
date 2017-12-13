@@ -36,6 +36,7 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form method="POST" action="/tweets/" enctype="application/x-www-form-urlencoded">
@@ -44,8 +45,8 @@
           <span class="counter">140</span>
         </form>
       </section>
-      <section class="new-article">
-        <article>
+      <section id="tweets-container">
+        <article class="new-article" >
           <header class="tweet-header">
             <img class="avatars" src="https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png"/>
             <h3>Bill Fields</h3>
@@ -53,8 +54,10 @@
 
           </header>
 
-          <section class="tweet-section">Little tweet here.</section>
-          <footer class="tweet-footer">10 days ago</footer>
+          <section class="tweet-section"><p>Little tweet here.</p></section>
+          <footer class="tweet-footer"><p>10 days ago<span class="glyphicon glyphicon-flag" aria-hidden="true"></span></i></p>
+
+          </footer>
         </article>
       </section>
     </main>

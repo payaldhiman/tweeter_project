@@ -4,7 +4,6 @@
   background-position: left top;
   background-repeat: repeat;
   width: 400px;
-  height: 200px;
   background-color: white;
   margin: auto;
   border: 1px solid #ccc;
@@ -12,6 +11,7 @@
     /*padding-right: 2em;
     padding-left: 2em;*/
   margin-top: 2em;
+
 
 }
 
@@ -26,12 +26,14 @@ article .tweet-header h3 {
   margin: 0;
   padding-top: 18px;
 }
+
 .tweet-header p {
   display: inline-block;
   float: right;
   margin-top: -20px;
   padding: 0;
   color: grey;
+  padding-right: 5px;
 }
 
 
@@ -49,6 +51,11 @@ article .tweet-footer {
   border-radius: 0px 0px 6px 6px;
   padding-top: 10px;
   padding-left: 10px;
+
+}
+
+article .tweet-footer p {
+  margin: 5px;
 }
 
 article .avatars {
