@@ -3,35 +3,27 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
-
 $(document).ready(function() {
   $('#addtweet').submit(function(event) {
-    console.log("sdsd");
     event.preventDefault();
-    if(validate($(this))) {
+    if (validate($(this))) {
       $.ajax({
-      url: '/tweets/',
-      method: 'POST',
-      data: $(this).serialize(),
-      success: (s) => {$.ajax({
-        method: 'GET',
-        url: '/tweets'
-      }).done(function(results) {
-        renderTweets(results);
-        $('#addtweet').find('textarea').val("");
-         });}
-    });
+        url: '/tweets/',
+        method: 'POST',
+        data: $(this).serialize(),
+        success: (s) => {
+          loadTweets()
+          $('#addtweet').find('textarea').val("");
+        }
+      });
     } else {
-      alert("invalid input");
+      alert("Invalid input");
     }
-
   });
 
-  function validate(target){
+  function validate(target) {
     var input = target.find('textarea').val();
     return input.length <= 140 && input.trim().length !== 0;
-
   }
 
   $('.input').on('click', function() {
@@ -40,32 +32,27 @@ $(document).ready(function() {
     });
   });
 
-
-
   function loadTweets() {
     $.ajax({
       method: 'GET',
       url: '/tweets'
-    }).done(renderTweets);
+    })
+    .done(renderTweets);
   }
-$('.new-tweet').hide();
+
+  $('.new-tweet').hide();
   loadTweets();
 });
-
 
 function renderTweets(tweets) {
   // loops through tweets
   tweets.forEach(function(tweet) {
     var $newTweet = createTweetElement(tweet);
-    console.log($newTweet); // to see what it looks like
     $('#tweets-container').prepend($newTweet);
-  })
-
+  });
 }
 
 function createTweetElement(data) {
-  var $tweet = $("<article>").addClass("tweet");
-
   var $img = $("<img>").addClass("avatars");
   $img.attr('src', data.user.avatars.small);
   var $h3 = $("<h3>");
@@ -93,7 +80,6 @@ function createTweetElement(data) {
   $footer.append($iconsretweet);
   $footer.append($iconsflag);
 
-
   var $article = $("<article>").addClass("new-article");
   $article.append($header);
   $article.append($section);
@@ -101,5 +87,3 @@ function createTweetElement(data) {
 
   return $article;
 }
-
-
