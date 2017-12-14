@@ -34,6 +34,13 @@ $(document).ready(function() {
 
   }
 
+  $('.input').on('click', function() {
+    $('.new-tweet').slideToggle(function() {
+      $(this).find('textarea').select();
+    });
+  });
+
+
 
   function loadTweets() {
     $.ajax({
@@ -41,7 +48,7 @@ $(document).ready(function() {
       url: '/tweets'
     }).done(renderTweets);
   }
-
+$('.new-tweet').hide();
   loadTweets();
 });
 
