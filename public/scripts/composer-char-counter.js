@@ -12,4 +12,6 @@ $( document ).ready(function() {
     $('.counter').text(char).css({ color: color });
 
   });
+
+
 });

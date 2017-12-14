@@ -51,11 +51,19 @@ article .tweet-footer {
   border-radius: 0px 0px 6px 6px;
   padding-top: 10px;
   padding-left: 10px;
+  padding-right: 10px;
 
 }
 
 article .tweet-footer p {
   margin: 5px;
+  display: inline;
+}
+
+.fa-retweet, .fa-heart, .fa-flag {
+  color: #61c6b8;
+  padding-left: 5px;
+  float: right;
 }
 
 article .avatars {
