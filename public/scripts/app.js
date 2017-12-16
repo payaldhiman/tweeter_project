@@ -71,7 +71,7 @@ function createTweetElement(data) {
   $section.append($sectionP);
 
   var $footerP = $("<p>");
-  $footerP.text(data.created_at);
+  $footerP.text(moment(data.created_at).format('llll'));
   var $footer = $("<footer>").addClass("tweet-footer");
   var $iconsflag = $("<i>").addClass("fa fa-flag");
   var $iconsretweet = $("<i>").addClass("fa fa-retweet");
