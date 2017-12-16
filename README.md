@@ -1,6 +1,6 @@
 # Tweeter Project
 
-Tweeter is a full stack wed application built with HTML, CSS, JS, jQuery, AJAX, Node, Express and MongoDB.
+Tweeter is a full stack web application built with HTML, CSS, JS, jQuery, AJAX, Node, Express and MongoDB.
 
 ## Final Product
 !["compose tweet"](https://github.com/payaldhiman/tweeter_project/blob/master/docs/composetweet.png)
