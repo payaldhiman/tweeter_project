@@ -1,6 +1,6 @@
 // A $( document ).ready() block.
 $( document ).ready(function() {
-  $( ".new-tweet textarea" ).on( "keyup", function() {
+  $( ".new-tweet textarea" ).on( "keyup paste", function() {
     var max = 140;
     var len = $(this).val().length;
     var char = max - len;
@@ -10,8 +10,5 @@ $( document ).ready(function() {
       var color = "black";
     }
     $('.counter').text(char).css({ color: color });
-
   });
-
-
 });

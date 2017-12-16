@@ -3,6 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
 $(document).ready(function() {
   $('#addtweet').submit(function(event) {
     event.preventDefault();
@@ -75,15 +76,19 @@ function createTweetElement(data) {
   var $iconsflag = $("<i>").addClass("fa fa-flag");
   var $iconsretweet = $("<i>").addClass("fa fa-retweet");
   var $iconsheart = $("<i>").addClass("fa fa-heart");
+  var $footerdiv = $("<div>").text(data.likes).addClass("likecounter").attr("data-like", "like");
+  $footer.append($footerdiv);
   $footer.append($footerP);
   $footer.append($iconsheart);
   $footer.append($iconsretweet);
   $footer.append($iconsflag);
 
+
   var $article = $("<article>").addClass("new-article");
   $article.append($header);
   $article.append($section);
   $article.append($footer);
+  $article.data('id', data._id)
 
   return $article;
 }

@@ -8,11 +8,16 @@
   margin: auto;
   border: 1px solid #ccc;
   overflow: hidden;
-    /*padding-right: 2em;
-    padding-left: 2em;*/
   margin-top: 2em;
+}
 
-
+.likecounter {
+  float: right;
+  padding: 0px;
+  border: 0;
+  margin: 4px;
+  margin-top: 0px;
+  width: 0px;
 }
 
 article .tweet-header {
